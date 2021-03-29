@@ -1,61 +1,61 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld/>
-    </v-main>
-  </v-app>
+    <v-app>
+        <v-main>
+            <v-container fluid>
+            <Header></Header>
+            <router-view></router-view>
+            </v-container>
+        </v-main>
+    </v-app>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+    import Vue from 'vue';
+    import Header from './components/Header.vue'
 
-export default Vue.extend({
-  name: 'App',
+    export default Vue.extend({
+        name: 'App',
 
-  components: {
-    HelloWorld,
-  },
+        components: {
+            Header,
+        },
 
-  data: () => ({
-    //
-  }),
-});
+        data: () => ({
+            
+        }),
+    });
 </script>
+
+<style>
+/* 左右の余白を削除 */
+.container{
+     max-width: 100vw;
+     padding:0px;
+  }
+  /* 選手紹介css scopedを使用すると[data-nnn]つけられて適用されなくなるのであえてグローバルに書く */
+  .player_bg{
+    height: 500px;
+    background-image: url("./assets/player_bg.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+  .player_slick .slick-slide:not(.slick-center) {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: 0.2s linear;
+  }
+   .bg_color {
+        background-color: black !important;
+    }
+    .bg_color_green{
+        background-color: #026B2F;
+    }
+    .padding_none{
+        padding: 0px !important;
+    }
+</style>
