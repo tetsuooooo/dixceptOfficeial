@@ -18,7 +18,7 @@
                         <v-col cols="12" class="text-center text-center">
                                 <v-img :src="require('../assets/Next-KickOff.png')" width="100%" class="ma-auto"></v-img>
                         </v-col>
-                        <v-col cols="12" class="white--text text-center text-h4">{{match.place}}</v-col>
+                        <v-col cols="12" class="white--text text-center text-h6">{{match.place}}</v-col>
                         </v-row>
                     </v-col>
                     <v-col cols="4" sm="5">

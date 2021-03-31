@@ -28,10 +28,10 @@
           dense
         >
           <v-list-item-group>
-            <v-list-item>
+            <v-list-item to="/">
               <v-list-item-title>HOME</v-list-item-title>
             </v-list-item>
-            <v-list-item>
+            <v-list-item to="/Team">
               <v-list-item-title>Team</v-list-item-title>
             </v-list-item>
             <v-list-item>
