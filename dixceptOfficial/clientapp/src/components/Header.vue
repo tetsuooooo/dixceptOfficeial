@@ -29,12 +29,12 @@
         >
           <v-list-item-group>
             <v-list-item to="/">
-              <v-list-item-title>HOME</v-list-item-title>
+              <v-list-item-title>Home</v-list-item-title>
             </v-list-item>
             <v-list-item to="/Team">
               <v-list-item-title>Team</v-list-item-title>
             </v-list-item>
-            <v-list-item>
+            <v-list-item to="/Player">
               <v-list-item-title>Player</v-list-item-title>
             </v-list-item>
             <v-list-item>
