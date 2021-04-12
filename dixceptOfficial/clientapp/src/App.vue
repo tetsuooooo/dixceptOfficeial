@@ -2,9 +2,11 @@
     <v-app>
         <v-main>
             <v-container fluid>
-            <Header></Header>
-            <router-view></router-view>
-            <Footer></Footer>
+                <Header></Header>
+                <transition name="fade" mode="out-in">
+                    <router-view></router-view>
+                </transition>
+                <Footer></Footer>
             </v-container>
         </v-main>
     </v-app>
@@ -22,41 +24,52 @@
             Footer
         },
         data: () => ({
-            
+
         }),
     });
 </script>
 
 <style>
-/* 左右の余白を削除 */
-.container{
-     max-width: 100vw;
-     padding:0px;
-  }
-  /* 選手紹介css scopedを使用すると[data-nnn]つけられて適用されなくなるのであえてグローバルに書く */
-  .player_bg{
-    height: 500px;
-    background-image: url("./assets/player_bg.jpg"); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
+    /* 左右の余白を削除 */
+    .container {
+        max-width: 100vw;
+        padding: 0px;
+    }
+    /* 選手紹介css scopedを使用すると[data-nnn]つけられて適用されなくなるのであえてグローバルに書く */
+    .player_bg {
+        height: 500px;
+        background-image: url("./assets/player_bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 
-  .player_slick .slick-slide:not(.slick-center) {
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    filter: grayscale(100%);
-    transition: 0.2s linear;
-  }
-   .bg_color {
+    .player_slick .slick-slide:not(.slick-center) {
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        filter: grayscale(100%);
+        transition: 0.2s linear;
+    }
+
+    .bg_color {
         background-color: black !important;
     }
-    .bg_color_green{
+
+    .bg_color_green {
         background-color: #026B2F;
     }
-    .padding_none{
+
+    .padding_none {
         padding: 0px !important;
+    }
+
+    .fade-enter, .fade-leave-to {
+        opacity: 0;
+    }
+
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity 0,7;
     }
 </style>

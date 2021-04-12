@@ -3,31 +3,69 @@ import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 import Team from '../views/Team.vue'
 import Player from '../views/Player.vue'
+import News from '../views/News.vue'
+import NewsDetail from '../views/NewsDetail.vue'
+import MatchResult from '../views/MatchResult.vue'
+import Training from '../views/Training.vue'
+import Schedule from '../views/Schedule.vue'
+import Contact from '../views/Contact.vue'
 
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/Team',
-    name: 'Team',
-    component: () => import(/* webpackChunkName: "Team" */ '../views/Team.vue')
-  },
-  {
-    path: '/Player',
-    name: 'Player',
-    component: () => import(/* webpackChunkName: "Player" */ '../views/Player.vue')
-  }
+    {
+        path: '/',
+        component: Home
+    },
+    {
+        path: '/Team',
+        component: Team
+    },
+    {
+        path: '/Player',
+        component: Player
+    },
+    {
+        path: '/News',
+        component: News
+    },
+    {
+        path: '/News/:id',
+        name: 'news-detail',
+        component: NewsDetail,
+        props: true,
+    },
+    {
+        path: '/MatchResult/:id',
+        name: 'match-result',
+        component: MatchResult,
+        props: true
+    },
+    {
+        path: '/Training/:id',
+        name: 'training',
+        component: Training,
+        props: true
+    },
+    {
+      path: '/Schedule',
+      component: Schedule
+    },
+    {
+      path: '/Contact',
+      component: Contact,
+    },
+    {
+        // ユーザーがクエリ改変してきた場合は全部ホームページに行くようにする
+        path: '*',
+        redirect: '/'
+    }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes
 })
 
 export default router

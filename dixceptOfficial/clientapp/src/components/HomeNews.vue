@@ -19,7 +19,7 @@
                         <div v-show="n.show">
                             <v-divider></v-divider>
                             <v-card-text>
-                            サンプル
+                                サンプル
                             </v-card-text>
                         </div>
                     </v-expand-transition>
@@ -30,63 +30,62 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+    import { Component, Vue } from 'vue-property-decorator';
 
-@Component({
-  components: {
-   
-  },
-})
-export default class Home extends Vue {
-  data(){
-      return{
-          news:{
-              one: {
-                  date: '2020/12/31',
-                  title: "本日の活動について",
-                  show: false
-              },
-              two: {
-                  date: '2020/12/31',
-                  title: "本日の活動について",
-                  show: false
-              },
-              three: {
-                  date: '2020/12/31',
-                  title: "本日の活動について",
-                  show: false
-              },
-              four: {
-                  date: '2020/12/31',
-                  title: "本日の活動について",
-                  show: false
-              },
-              five: {
-                  date: '2020/12/31',
-                  title: "本日の活動について",
-                  show: false
-              },
-              six: {
-                  date: '2020/12/31',
-                  title: "本日の活動について",
-                  show: false
-              },
-              seven: {
-                  date: '2020/12/31',
-                  title: "本日の活動について",
-                  show: false
-              },
-              eight: {
-                  date: '2020/12/31',
-                  title: "本日の活動について",
-                  show: false
-              },
-          }
-      }
-  }
-}
+    @Component({
+        components: {
+
+        },
+    })
+    export default class Home extends Vue {
+        data() {
+            return {
+                news: {
+                    one: {
+                        date: '2020/12/31',
+                        title: "本日の活動について",
+                        show: false
+                    },
+                    two: {
+                        date: '2020/12/31',
+                        title: "本日の活動について",
+                        show: false
+                    },
+                    three: {
+                        date: '2020/12/31',
+                        title: "本日の活動について",
+                        show: false
+                    },
+                    four: {
+                        date: '2020/12/31',
+                        title: "本日の活動について",
+                        show: false
+                    },
+                    five: {
+                        date: '2020/12/31',
+                        title: "本日の活動について",
+                        show: false
+                    },
+                    six: {
+                        date: '2020/12/31',
+                        title: "本日の活動について",
+                        show: false
+                    },
+                    seven: {
+                        date: '2020/12/31',
+                        title: "本日の活動について",
+                        show: false
+                    },
+                    eight: {
+                        date: '2020/12/31',
+                        title: "本日の活動について",
+                        show: false
+                    },
+                }
+            }
+        }
+    }
 </script>
 
 <style scoped>
-  
 </style>
