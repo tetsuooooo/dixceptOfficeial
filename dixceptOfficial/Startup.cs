@@ -49,7 +49,7 @@ namespace dixceptOfficial
                 if (env.IsDevelopment())
                 {
                     // npm run serve で走らせる開発サーバーの URL
-                    spa.UseProxyToSpaDevelopmentServer("http://localhost:8093");
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:8080");
                 }
             });
         }

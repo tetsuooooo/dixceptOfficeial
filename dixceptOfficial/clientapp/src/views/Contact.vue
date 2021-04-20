@@ -108,7 +108,6 @@
 
         submit() {
             this.$refs.observer.validate();
-            console.log("")
         }
     }
 </script>

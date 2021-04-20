@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="bg_color_black">
+        <div class="bg_color_black main_img">
             <v-img :src="require('../assets/home.jpg')" height="100vh" width="100%" aspect-ratio="1.4" contain></v-img>
         </div>
         <home-ranking></home-ranking>
@@ -40,5 +40,8 @@
 <style scoped>
     .bg_color_black {
         background-color: black !important;
+    }
+    .main_img{
+        height: 700px;
     }
 </style>

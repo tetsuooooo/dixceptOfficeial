@@ -53,6 +53,32 @@
         transition: 0.2s linear;
     }
 
+    /* 試合カルーセルcss */
+    .match_team_area {
+        height: 150px;
+    }
+
+    .match_area {
+        height: 300px;
+    }
+
+    .match_margin {
+        margin-top: 40%;
+    }
+
+    .match_border {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+
+    .match_point_margin {
+        margin-top: 25%
+    }
+
+    .match_border_bottom {
+        border-bottom: 1px solid white;
+    }
+
     .bg_color {
         background-color: black !important;
     }
