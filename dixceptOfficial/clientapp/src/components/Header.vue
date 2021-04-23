@@ -1,22 +1,39 @@
 <template>
     <div>
-        <v-app-bar app dark class="bg_color">
-            <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-            <v-row justify="space-between" align="center" class="hidden-xs-only">
-                <v-col cols="10" md="2">
-                    <v-img :src="require('../assets/dixsept_header_label.jpg')" height="50" aspect-ratio="2" contain></v-img>
-                </v-col>
-                <v-col cols="2">
-                    <v-row justify="end" align="center">
-                        <v-col cols="3" v-for="(sns, key, index) in snsContent" :key="index" class="sns_hover">
-                            <a :href="sns.url" target="_blank">
-                                <v-img :src="require(`../assets/${sns.src}`)" width="30" height="30"></v-img>
-                            </a>
-                        </v-col>
-                    </v-row>
-                </v-col>
-            </v-row>
-        </v-app-bar>
+        <header>
+            <v-app-bar app dark class="bg_color">
+                <v-app-bar-nav-icon @click="drawer = true" class="d-block d-sm-none"></v-app-bar-nav-icon>
+                <v-row>
+                    <v-col cols="2">
+                        <v-img :src="require('../assets/dixsept_header_label.jpg')" height="50" aspect-ratio="2" contain></v-img>
+                    </v-col>
+                </v-row>
+                <v-row>
+                    <v-col cols="12" class="padding_none">
+                        <v-row justify="center" align-content="center" class="bg_color_black">
+                            <v-col cols="5" class="padding_none text-right">
+                                <v-tabs class="sample">
+                                    <v-tab>Home</v-tab>
+                                    <v-tab>Team</v-tab>
+                                    <v-tab>Player</v-tab>
+                                </v-tabs>
+                            </v-col>
+                            <v-col cols="1" class="padding_none bg_color_black">
+                                <v-col cols="12" class="padding_none logo_img"></v-col>
+                            </v-col>
+                            <v-col cols="5" class="padding_none">
+                                <v-tabs>
+                                    <v-tab>News</v-tab>
+                                    <v-tab>Schedule</v-tab>
+                                    <v-tab>Contact</v-tab>
+                                    <v-spacer></v-spacer>
+                                </v-tabs>
+                            </v-col>
+                        </v-row>
+                    </v-col>
+                </v-row>
+            </v-app-bar>
+        </header>
         <!-- サイドバー -->
         <v-navigation-drawer v-model="drawer"
                              fixed
@@ -75,10 +92,45 @@
     })
 </script>
 
-<style scoped>
+<style>
+
     .sns_hover:hover {
         opacity: 0.5; /* 透過率50% */
         transition: 0.2s; /* 0.2秒アニメーション */
         -webkit-transition: 0.2s;
+    }
+
+    .header_area {
+        height: 200px;
+    }
+    /* ヘッダを二段にするために無理やりcssを変更しています */
+    /* TODO: 正規の方法があったら変更する */
+    .v-toolbar__content, .v-toolbar__extension {
+        display: block !important;
+        padding: none !important;
+    }
+    .v-slide-group__content{
+        justify-content: flex-end !important;
+    }
+    .v-tab{
+        width: 10vw;
+    }
+    .theme--dark{
+        background-color: black !important;
+    }
+    /* ヘッダーロゴ設定 */
+    .logo_img{
+        position: absolute;
+    }
+    .logo_img::after{
+        content: '';
+        display: inline-block;
+        position: relative;
+        width: 10vw;
+        height: 18vh;
+        top: -7vh;
+        left: 0px;
+        background-image: url("../assets/dixsept_header_logo.png");
+        background-size: contain;
     }
 </style>

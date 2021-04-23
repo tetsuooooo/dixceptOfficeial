@@ -38,9 +38,6 @@
 </script>
 
 <style scoped>
-    .bg_color_black {
-        background-color: black !important;
-    }
     .main_img{
         height: 700px;
     }

@@ -35,6 +35,9 @@
         max-width: 100vw;
         padding: 0px;
     }
+    .bg_color_black {
+        background-color: black !important;
+    }
     /* 選手紹介css scopedを使用すると[data-nnn]つけられて適用されなくなるのであえてグローバルに書く */
     .player_bg {
         height: 500px;
