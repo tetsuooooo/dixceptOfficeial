@@ -1,21 +1,24 @@
 <template>
-    <div>
+    <div class="header_div bg_color_black">
         <header>
             <v-app-bar app dark class="bg_color">
-                <v-app-bar-nav-icon @click="drawer = true" class="d-block d-sm-none"></v-app-bar-nav-icon>
-                <v-row>
+                <!-- sp画面 -->
+                <v-app-bar-nav-icon @click="drawer = true" class="hidden-sm-and-up"></v-app-bar-nav-icon>
+                    <v-img :src="require('../assets/dixsept_header_label.jpg')" height="50" width="120" aspect-ratio="2" contain class="xs_header_label"></v-img>
+                <!--  -->
+                <v-row class="hidden-sm-and-down">
                     <v-col cols="2">
                         <v-img :src="require('../assets/dixsept_header_label.jpg')" height="50" aspect-ratio="2" contain></v-img>
                     </v-col>
                 </v-row>
-                <v-row>
+                <v-row class="hidden-sm-and-down">
                     <v-col cols="12" class="padding_none">
                         <v-row justify="center" align-content="center" class="bg_color_black">
                             <v-col cols="5" class="padding_none text-right">
                                 <v-tabs class="sample">
-                                    <v-tab>Home</v-tab>
-                                    <v-tab>Team</v-tab>
-                                    <v-tab>Player</v-tab>
+                                    <v-tab to="/">Home</v-tab>
+                                    <v-tab to="/Team">Team</v-tab>
+                                    <v-tab to="/Player">Player</v-tab>
                                 </v-tabs>
                             </v-col>
                             <v-col cols="1" class="padding_none bg_color_black">
@@ -23,9 +26,9 @@
                             </v-col>
                             <v-col cols="5" class="padding_none">
                                 <v-tabs>
-                                    <v-tab>News</v-tab>
-                                    <v-tab>Schedule</v-tab>
-                                    <v-tab>Contact</v-tab>
+                                    <v-tab to="/News">News</v-tab>
+                                    <v-tab to="/Schedule">Schedule</v-tab>
+                                    <v-tab to="/Contact">Contact</v-tab>
                                     <v-spacer></v-spacer>
                                 </v-tabs>
                             </v-col>
@@ -89,6 +92,7 @@
                 },
             }
         }
+        
     })
 </script>
 
@@ -132,5 +136,27 @@
         left: 0px;
         background-image: url("../assets/dixsept_header_logo.png");
         background-size: contain;
+    }
+    .header_div{
+        padding-bottom: 5%;
+    }
+    /* sp画面のみ対応 */
+    @media screen and (max-width: 480px) {
+        header{
+            width: 100vw !important;
+            display: flex !important;
+        }
+        .xs_header_label{
+            display: inline-block !important;
+        }
+        .header_div{
+            padding-bottom: 0px !important;
+        }
+        .v-toolbar__content, .v-toolbar__extension{
+            display: flex !important;
+        }
+        .xs_header_label{
+            margin-left: 47%;
+        }
     }
 </style>

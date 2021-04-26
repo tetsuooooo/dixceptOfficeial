@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="bg_color_black main_img">
-            <v-img :src="require('../assets/home.jpg')" height="100vh" width="100%" aspect-ratio="1.4" contain></v-img>
+            <v-img :src="require('../assets/home.jpg')" width="100%" aspect-ratio="1.4" contain></v-img>
         </div>
         <home-ranking></home-ranking>
         <home-news></home-news>
@@ -40,5 +40,10 @@
 <style scoped>
     .main_img{
         height: 700px;
+    }
+    @media screen and (max-width:480px) {
+        .main_img{
+        height: 350px;
+    }
     }
 </style>
