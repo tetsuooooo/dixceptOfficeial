@@ -4,7 +4,8 @@
             <v-app-bar app dark class="bg_color">
                 <!-- sp画面 -->
                 <v-app-bar-nav-icon @click="drawer = true" class="hidden-sm-and-up"></v-app-bar-nav-icon>
-                    <v-img :src="require('../assets/dixsept_header_label.jpg')" height="50" width="120" aspect-ratio="2" contain class="xs_header_label"></v-img>
+                <v-img :src="require('../assets/dixsept_header_label.jpg')" aspect-ratio="2" contain class="xs_header_label hidden-sm-and-up"></v-img>
+                   
                 <!--  -->
                 <v-row class="hidden-sm-and-down">
                     <v-col cols="2">
@@ -154,9 +155,13 @@
         }
         .v-toolbar__content, .v-toolbar__extension{
             display: flex !important;
+            width: 100%;
         }
         .xs_header_label{
-            margin-left: 47%;
+            margin-right: 10%;
+            height: 50px;
+            width: 70%;
         }
+        
     }
 </style>

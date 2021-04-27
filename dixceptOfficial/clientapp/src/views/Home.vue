@@ -1,7 +1,7 @@
 <template>
     <section>
-        <div class="bg_color_black main_img">
-            <v-img :src="require('../assets/home.jpg')" width="100%" aspect-ratio="1.4" contain></v-img>
+        <div class="bg_color_black main_img_div">
+            <v-img :src="require('../assets/home.jpg')" width="100%" aspect-ratio="1.4" class="main_img" contain></v-img>
         </div>
         <home-ranking></home-ranking>
         <home-news></home-news>
@@ -38,11 +38,15 @@
 </script>
 
 <style scoped>
-    .main_img{
+    .main_img_div{
         height: 700px;
+        padding-bottom: 2%;
+    }
+    .main_img{
+        height: 100%;
     }
     @media screen and (max-width:480px) {
-        .main_img{
+        .main_img_div{
         height: 350px;
     }
     }
