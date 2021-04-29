@@ -101,9 +101,5 @@
     .fade-enter-active, .fade-leave-active {
         transition: opacity 0,7;
     }
-    @media screen and (max-width:480px){
-        /* .row{
-            margin: 0px !important;
-        } */
-    }
+  
 </style>
