@@ -101,5 +101,29 @@
     .fade-enter-active, .fade-leave-active {
         transition: opacity 0,7;
     }
+
+     @media screen and (max-width:480px){
+        .sp_padding_none{
+            padding: 0px !important;
+        }
+        .player_bg {
+        height: 300px;
+        }
+        .sp_player_div{
+        width: 100%;
+        height: 300px;
+        margin: auto;
+        }
+        .sp_player_img{
+            width: 60% !important;
+            margin: auto;
+        }
+        .sp_player_font_sm{
+            font-size: 25px !important;
+        }
+        .row_margin{
+            margin: 0px !important;
+        }
+    }
   
 </style>

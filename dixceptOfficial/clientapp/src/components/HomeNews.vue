@@ -7,7 +7,7 @@
                 <v-card class="mx-auto" max-width="344">
                     <v-img src="../assets/dixsept_header_logo.png" height="200px" contain></v-img>
                     <v-card-subtitle>{{n.date}}</v-card-subtitle>
-                    <v-card-title>{{n.title}}</v-card-title>
+                    <v-card-title class="sp_news_font sp_heihgt_padding_none">{{n.title}}</v-card-title>
                 </v-card>
             </v-col>
         </v-row>
@@ -73,4 +73,13 @@
 </script>
 
 <style scoped>
+@media screen and (max-width: 480px){
+    .sp_news_font{
+        font-size: 15px;
+    }
+    .sp_heihgt_padding_none{
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+}
 </style>
