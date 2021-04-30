@@ -89,8 +89,6 @@
 </script>
 
 <style scoped>
-@media screen and (max-width: 480px){
-    
-}
+
 </style>
 
