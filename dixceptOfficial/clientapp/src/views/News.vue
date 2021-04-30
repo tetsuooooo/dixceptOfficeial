@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <v-container fluid>
         <v-row>
             <v-col cols="12">
                 <v-img :src="require('../assets/NoImg.png')" width="100%" height="40vh"></v-img>
@@ -19,7 +19,7 @@
                 </v-data-table>
             </v-col>
         </v-row>
-    </div>
+    </v-container>
 </template>
 
 <script lang="ts">

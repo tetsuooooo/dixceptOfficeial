@@ -1,17 +1,17 @@
 <template>
+<v-container>
     <v-row class="mt-3">
         <v-divider></v-divider>
-        <v-col cols="12" class="text-h2 text-center">News</v-col>
-        <v-row class="mt-2">
-            <v-col cols="6" sm="3" v-for="(n, index) in news" :key="index">
-                <v-card class="mx-auto" max-width="344">
-                    <v-img src="../assets/dixsept_header_logo.png" height="200px" contain></v-img>
-                    <v-card-subtitle>{{n.date}}</v-card-subtitle>
-                    <v-card-title class="sp_news_font sp_heihgt_padding_none">{{n.title}}</v-card-title>
-                </v-card>
-            </v-col>
-        </v-row>
+        <v-col cols="12" class="text-h2 text-center mb-2">News</v-col>
+        <v-col cols="6" sm="3" v-for="(n, index) in news" :key="index">
+            <v-card class="mx-auto">
+                <v-img src="../assets/dixsept_header_logo.png" height="200px" contain class="news_img"></v-img>
+                <v-card-subtitle>{{n.date}}</v-card-subtitle>
+                <v-card-title class="sp_news_font sp_heihgt_padding_none">{{n.title}}</v-card-title>
+            </v-card>
+        </v-col>
     </v-row>
+</v-container>
 </template>
 
 <script lang="ts">
@@ -81,5 +81,6 @@
         padding-top: 0px !important;
         padding-bottom: 0px !important;
     }
+
 }
 </style>

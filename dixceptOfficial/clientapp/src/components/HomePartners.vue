@@ -6,12 +6,12 @@
             <v-row justify="center">
                 <v-col cols="6">
                     <v-card>
-                        <v-img src="../assets/afford.jpg" width="100%" height="300" contain></v-img>
+                        <v-img src="../assets/afford.jpg" width="100%" height="300" class="partner_img" contain></v-img>
                     </v-card>
                 </v-col>
                 <v-col cols="6">
                     <v-card>
-                        <v-img src="../assets/partner.png" width="100%" height="300" contain></v-img>
+                        <v-img src="../assets/partner.png" width="100%" height="300" class="partner_img" contain></v-img>
                     </v-card>
                 </v-col>
             </v-row>
@@ -33,4 +33,10 @@
 </script>
 
 <style scoped>
+@media screen and (max-width: 480px){
+  .partner_img{
+      height: 100px !important;
+  }
+
+}
 </style>
