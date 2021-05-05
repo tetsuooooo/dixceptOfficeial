@@ -13,34 +13,35 @@
             <v-row justify="center">
                 <v-col cols="10">
                     <v-row>
-                        <v-col class="text-h5">1本目</v-col>
-                        <v-col class="text-h5">2-2</v-col>
-                        <v-col class="text-h5">得点者</v-col>
-                        <v-col class="subtitle-2">太郎、太郎、太郎</v-col>
+                        <v-col class="text-h5" cols="6" sm="2">1本目</v-col>
+                        <v-col class="text-h5" cols="6" sm="2">2-2</v-col>
+                        <v-col class="text-h5" cols="4" sm="4">得点者</v-col>
+                        <v-col class="subtitle-2" cols="8" sm="4">太郎、太郎、太郎</v-col>
                     </v-row>
                 </v-col>
             </v-row>
             <v-row justify="center">
                 <v-col cols="10">
                     <v-row>
-                        <v-col class="text-h5">2本目</v-col>
-                        <v-col class="text-h5">2-2</v-col>
-                        <v-col class="text-h5">得点者</v-col>
-                        <v-col class="subtitle-2">太郎、太郎、太郎</v-col>
+                        <v-col class="text-h5" cols="6" sm="2">2本目</v-col>
+                        <v-col class="text-h5" cols="6" sm="2">2-2</v-col>
+                        <v-col class="text-h5" cols="4" sm="4">得点者</v-col>
+                        <v-col class="subtitle-2" cols="8" sm="4">太郎、太郎、太郎</v-col>
                     </v-row>
                 </v-col>
             </v-row>
             <v-row justify="center">
                 <v-col cols="10">
                     <v-row>
-                        <v-col class="text-h5">3本目</v-col>
-                        <v-col class="text-h5">2-2</v-col>
-                        <v-col class="text-h5">得点者</v-col>
-                        <v-col class="subtitle-2">太郎、太郎、太郎</v-col>
+                         <v-col class="text-h5" cols="6" sm="2">3本目</v-col>
+                        <v-col class="text-h5" cols="6" sm="2">2-2</v-col>
+                        <v-col class="text-h5" cols="4" sm="4">得点者</v-col>
+                        <v-col class="subtitle-2" cols="8" sm="4">太郎、太郎、太郎</v-col>
                     </v-row>
                 </v-col>
             </v-row>
             <v-row justify="center" class="mb-5">
+                <v-col cols="10" class="text-h5">コメント</v-col>
                 <v-col cols="10">
                     samplesamplesamplesamplesamplesamplesamplesamplesamplesamplesamplesamplesamplesample
                     samplesamplesamplesamplesamplesamplesamplesamplesamplesamplesamplesamplesamplesample

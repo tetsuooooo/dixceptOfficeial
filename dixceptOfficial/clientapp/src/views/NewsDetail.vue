@@ -11,6 +11,7 @@
                 </v-col>
             </v-row>
             <v-row justify="center" class="mb-5">
+                <v-col cols="10" class="text-h5">コメント</v-col>
                 <v-col cols="10">
                     samplesamplesamplesamplesamplesamplesamplesamplesamplesamplesamplesamplesamplesample
                     samplesamplesamplesamplesamplesamplesamplesamplesamplesamplesamplesamplesamplesample

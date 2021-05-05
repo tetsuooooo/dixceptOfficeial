@@ -9,12 +9,12 @@
             <v-col cols="11">
                 <v-data-table :headers="headers" :items="items">
                     <template v-slot:item.category="{item}">
-                        <v-btn v-if="item.category == 1" color="yellow">お知らせ</v-btn>
-                        <v-btn v-else-if="item.category == 2" color="blue">練習試合</v-btn>
-                        <v-btn v-else-if="item.category == 3" color="red">公式戦</v-btn>
+                        <v-btn v-if="item.category == 1" color="yellow" elevation="2" outlined small>News</v-btn>
+                        <v-btn v-else-if="item.category == 2" color="blue" elevation="2" outlined small>PracticeGame</v-btn>
+                        <v-btn v-else-if="item.category == 3" color="red" elevation="2" outlined small>OffcialGame</v-btn>
                     </template>
                     <template v-slot:item.actions="{item}">
-                        <v-btn color="green" @click="toNewsDetail(item.category, item.actions)">詳細</v-btn>
+                        <v-btn color="green" @click="toNewsDetail(item.category, item.actions)" elevation="2" outlined small>Viewmore</v-btn>
                     </template>
                 </v-data-table>
             </v-col>
@@ -58,6 +58,42 @@
                         title: '公式戦',
                         actions: 3
                     },
+                    {
+                        date: '2021/04/01',
+                        category: 1,
+                        title: 'お知らせ',
+                        actions: 1
+                    },
+                    {
+                        date: '2021/04/01',
+                        category: 2,
+                        title: '今日の試合',
+                        actions: 2
+                    },
+                    {
+                        date: '2021/04/01',
+                        category: 3,
+                        title: '公式戦',
+                        actions: 3
+                    },
+                    {
+                        date: '2021/04/01',
+                        category: 1,
+                        title: 'お知らせ',
+                        actions: 1
+                    },
+                    {
+                        date: '2021/04/01',
+                        category: 2,
+                        title: '今日の試合',
+                        actions: 2
+                    },
+                    {
+                        date: '2021/04/01',
+                        category: 3,
+                        title: '公式戦',
+                        actions: 3
+                    },
                 ]
             }
         }
@@ -80,4 +116,5 @@
 </script>
 
 <style scoped>
+
 </style>

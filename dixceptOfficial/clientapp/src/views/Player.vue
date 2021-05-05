@@ -16,7 +16,7 @@
             <v-col cols="11">
                 <v-card>
                     <v-row>
-                        <v-col cols="3" v-for="(n, index) in 16" :key="index" @click.stop="dialog = true">
+                        <v-col cols="12" sm="3" v-for="(n, index) in 16" :key="index" @click.stop="dialog = true">
                             <v-row justify="center" class="player_detail">
                                 <v-col cols="12">
                                     <v-img :src="require('../assets/NoImg.png')" width="100%" contain></v-img>
@@ -43,16 +43,16 @@
         </v-row>
         <v-dialog v-model="dialog" max-width="600" height="400">
             <v-card>
-                <v-row justify="center">
+                <v-row justify="center" class="mt-3">
                     <v-col cols="11">
-                        <v-img :src="require('../assets/NoImg.png')" width="100%" height="200" contain></v-img>
+                        <v-img :src="require('../assets/NoImg.png')" width="100%" height="300" contain></v-img>
                     </v-col>
                 </v-row>
                 <v-row justify="center">
                     <v-col cols="11">
                         <v-row>
-                            <v-col cols="3" class="text-h3 text-center">10</v-col>
-                            <v-col cols="9" class="text-h3 text-center">サンプル太郎</v-col>
+                            <v-col cols="3" class="text-sm-h3 text-h5 text-center">10</v-col>
+                            <v-col cols="9" class="text-sm-h3 text-h5 text-center">サンプル太郎</v-col>
                         </v-row>
                         <v-row>
                             <v-col cols="12">
@@ -60,19 +60,19 @@
                                     <template v-slot:default>
                                         <tbody>
                                             <tr>
-                                                <td width="30%">ポジション</td>
+                                                <td class="text-no-wrap">ポジション</td>
                                                 <td>Goleiro</td>
                                             </tr>
                                             <tr>
-                                                <td>出身地</td>
+                                                <td class="text-no-wrap">出身地</td>
                                                 <td>埼玉県</td>
                                             </tr>
                                             <tr>
-                                                <td>生年月日</td>
+                                                <td class="text-no-wrap">生年月日</td>
                                                 <td>1995年4月3日</td>
                                             </tr>
                                             <tr>
-                                                <td>コメント</td>
+                                                <td class="text-no-wrap">コメント</td>
                                                 <td>
                                                     samplesamplesamplesamplesamplesamplesample
                                                     samplesamplesamplesamplesamplesamplesample
