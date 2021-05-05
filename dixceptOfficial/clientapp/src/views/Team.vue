@@ -28,21 +28,21 @@
                 <v-card>
                     <v-card-title>ユニフォーム</v-card-title>
                     <v-row justify="center">
-                        <v-col cols="6">
+                        <v-col cols="12" sm="6">
                             <v-card-subtitle>フィールド1st</v-card-subtitle>
-                            <v-img :src="require('../assets/NoImg.png')" contain width="80%" height="300"></v-img>
+                            <v-img :src="require('../assets/NoImg.png')" contain width="80%" height="300" class="uniform_img"></v-img>
                         </v-col>
-                        <v-col cols="6">
+                        <v-col cols="12" sm="6">
                             <v-card-subtitle>フィールド2nd</v-card-subtitle>
-                            <v-img :src="require('../assets/NoImg.png')" contain width="80%" height="300"></v-img>
+                            <v-img :src="require('../assets/NoImg.png')" contain width="80%" height="300" class="uniform_img"></v-img>
                         </v-col>
-                        <v-col cols="6">
+                        <v-col cols="12" sm="6">
                             <v-card-subtitle>ゴレイロ1st</v-card-subtitle>
-                            <v-img :src="require('../assets/NoImg.png')" contain width="80%" height="300"></v-img>
+                            <v-img :src="require('../assets/NoImg.png')" contain width="80%" height="300" class="uniform_img"></v-img>
                         </v-col>
-                        <v-col cols="6">
+                        <v-col cols="12" sm="6">
                             <v-card-subtitle>ゴレイロ2nd</v-card-subtitle>
-                            <v-img :src="require('../assets/NoImg.png')" contain width="80%" height="300"></v-img>
+                            <v-img :src="require('../assets/NoImg.png')" contain width="80%" height="300" class="uniform_img"></v-img>
                         </v-col>
                     </v-row>
                 </v-card>
@@ -53,26 +53,36 @@
                 <v-card>
                     <v-card-title>戦績</v-card-title>
                     <v-row>
-                        <v-col cols="2">
+                        <v-col cols="4" sm="2">
                             <v-card-subtitle>2016年</v-card-subtitle>
                         </v-col>
-                        <v-col cols="6">
+                        <v-col cols="8" sm="6">
                             <v-card-text>xxxx大会優勝</v-card-text>
                         </v-col>
-                        <v-col cols="4">
-                            <v-img :src="require('../assets/NoImg.png')" contain width="100%" height="150"></v-img>
+                        <v-col cols="12" sm="4" class="mb-1">
+                            <v-img :src="require('../assets/NoImg.png')" contain width="100%" height="150" class="uniform_img"></v-img>
                         </v-col>
                     </v-row>
-                    <v-divider></v-divider>
                     <v-row>
-                        <v-col cols="2">
+                        <v-col cols="4" sm="2">
                             <v-card-subtitle>2016年</v-card-subtitle>
                         </v-col>
-                        <v-col cols="6">
+                        <v-col cols="8" sm="6">
                             <v-card-text>xxxx大会優勝</v-card-text>
                         </v-col>
-                        <v-col cols="4">
-                            <v-img :src="require('../assets/NoImg.png')" contain width="100%" height="150"></v-img>
+                        <v-col cols="12" sm="4" class="mb-1">
+                            <v-img :src="require('../assets/NoImg.png')" contain width="100%" height="150" class="uniform_img"></v-img>
+                        </v-col>
+                    </v-row>
+                    <v-row>
+                        <v-col cols="4" sm="2">
+                            <v-card-subtitle>2016年</v-card-subtitle>
+                        </v-col>
+                        <v-col cols="8" sm="6">
+                            <v-card-text>xxxx大会優勝</v-card-text>
+                        </v-col>
+                        <v-col cols="12" sm="4" class="mb-1">
+                            <v-img :src="require('../assets/NoImg.png')" contain width="100%" height="150" class="uniform_img"></v-img>
                         </v-col>
                     </v-row>
                 </v-card>
@@ -89,7 +99,7 @@
 
         },
     })
-    export default class Home extends Vue {
+    export default class Team extends Vue {
         data() {
             return {
                 overView: {
@@ -121,4 +131,9 @@
 </script>
 
 <style scoped>
+@media screen and (max-width: 480px){
+    .uniform_img{
+        margin: auto;
+    }
+}
 </style>
