@@ -2,7 +2,7 @@
     <div>
         <v-card>
             <v-row justify="center">
-                <v-col cols="10" class="text-h3 boder_left mt-5">VS 練習試合相手名</v-col>
+                <v-col cols="10" class="text-sm-h3 text-h6 boder_left mt-5">VS 練習試合相手名</v-col>
                 <v-col cols="10" class="subtitle-2">2020/12/31</v-col>
             </v-row>
             <v-row justify="center">

@@ -30,7 +30,7 @@
 
         },
     })
-    export default class Home extends Vue {
+    export default class News extends Vue {
         data() {
             return {
                 headers: [

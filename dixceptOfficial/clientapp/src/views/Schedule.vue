@@ -9,48 +9,17 @@
             <v-col cols="10">
                 <v-card>
                     <v-row justify="space-between">
-                        <v-col cols="3" class="text-h3">{{year}}</v-col>
-                        <v-col cols="3">
+                        <v-col cols="3" class="text-sm-h3 text-h6 text-center">{{year}}</v-col>
+                        <v-col cols="6" sm="3">
                             <v-select :items="['','2020','2021']" label="シーズン選択">
                             </v-select>
                         </v-col>
                     </v-row>
                     <hr>
                     <v-row class="mt-5">
-                        <v-col cols="12" class="text-h5 border_left mt-5 ml-5">埼玉県フットサル2部リーグ</v-col>
+                        <v-col cols="12" class="text-sm-h5 text-h6 border_left mt-5 ml-5">埼玉県フットサル2部リーグ</v-col>
                         <v-col cols="12">
-                            <v-simple-table>
-                            <template v-slot:default>
-                                <thead>
-                                    <tr>
-                                        <th>節</th>
-                                        <th>日付</th>
-                                        <th>時間</th>
-                                        <th>対戦相手</th>
-                                        <th>会場</th>
-                                        <th>結果</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>第1節</td>
-                                        <td>4/16</td>
-                                        <td>10:00</td>
-                                        <td>九龍FC</td>
-                                        <td>宮代体育館</td>
-                                        <td>5-4</td>
-                                    </tr>
-                                    <tr>
-                                        <td>第2節</td>
-                                        <td>5/16</td>
-                                        <td>10:00</td>
-                                        <td>対戦相手</td>
-                                        <td>宮代体育館</td>
-                                        <td>-</td>
-                                    </tr>
-                                </tbody>
-                            </template>
-                        </v-simple-table>
+                            <v-data-table :headers="headers" :items="items"></v-data-table>
                         </v-col>
                     </v-row>
                 </v-card>
@@ -70,7 +39,26 @@
     export default class Shedule extends Vue {
         data(){
             return {
-                year: 2021
+                year: 2021,
+                headers:[
+                    {text: "節", value: "section", align: "center"},
+                    {text: "日付", value: "date", align: "center"},
+                    {text: "時間", value: "time", align: "center"},
+                    {text: "対戦相手", value: "opponent", align: "center"},
+                    {text: "会場", value: "place", align: "center"},
+                    {text: "結果", value: "result", align: "center"},
+                ],
+                items:[
+                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
+                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
+                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
+                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
+                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
+                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
+                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
+                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
+                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
+                ],
             }
         }
     }
