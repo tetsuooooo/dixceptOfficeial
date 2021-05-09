@@ -48,12 +48,12 @@ const routes: Array<RouteConfig> = [
         props: true
     },
     {
-      path: '/Schedule',
-      component: Schedule
+        path: '/Schedule',
+        component: Schedule
     },
     {
-      path: '/Contact',
-      component: Contact,
+        path: '/Contact',
+        component: Contact,
     },
     {
         // ユーザーがクエリ改変してきた場合は全部ホームページに行くようにする

@@ -38,16 +38,18 @@
 </script>
 
 <style scoped>
-    .main_img_div{
+    .main_img_div {
         height: 700px;
         padding-bottom: 2%;
     }
-    .main_img{
+
+    .main_img {
         height: 100%;
     }
+
     @media screen and (max-width:480px) {
-        .main_img_div{
-        height: 350px;
-    }
+        .main_img_div {
+            height: 350px;
+        }
     }
 </style>

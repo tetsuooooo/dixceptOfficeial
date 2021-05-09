@@ -69,13 +69,14 @@
         height: 500px;
     }
 
-    @media screen and (max-width: 480px){
-      .next_match_bg{
-          height: 200px;
-      }
-      .sp_name_font{
-          font-size: 14px;
-          font-weight: bold;
-      }
+    @media screen and (max-width: 480px) {
+        .next_match_bg {
+            height: 200px;
+        }
+
+        .sp_name_font {
+            font-size: 14px;
+            font-weight: bold;
+        }
     }
 </style>

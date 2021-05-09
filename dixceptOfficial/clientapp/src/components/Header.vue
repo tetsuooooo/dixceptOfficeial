@@ -5,7 +5,7 @@
                 <!-- sp画面 -->
                 <v-app-bar-nav-icon @click="drawer = true" class="hidden-sm-and-up"></v-app-bar-nav-icon>
                 <v-img :src="require('../assets/dixsept_header_label.jpg')" aspect-ratio="2" contain class="xs_header_label hidden-sm-and-up"></v-img>
-                   
+
                 <!--  -->
                 <v-row class="hidden-sm-and-down">
                     <v-col cols="2">
@@ -93,7 +93,7 @@
                 },
             }
         }
-        
+
     })
 </script>
 
@@ -114,54 +114,62 @@
         display: block !important;
         padding: none !important;
     }
-    .v-slide-group__content{
+
+    .v-slide-group__content {
         justify-content: flex-end !important;
     }
-    .v-tab{
+
+    .v-tab {
         width: 10vw;
     }
-    .theme--dark{
+
+    .theme--dark {
         background-color: black !important;
     }
     /* ヘッダーロゴ設定 */
-    .logo_img{
+    .logo_img {
         position: absolute;
     }
-    .logo_img::after{
-        content: '';
-        display: inline-block;
-        position: relative;
-        width: 10vw;
-        height: 18vh;
-        top: -7vh;
-        left: 0px;
-        background-image: url("../assets/dixsept_header_logo.png");
-        background-size: contain;
-    }
-    .header_div{
+
+        .logo_img::after {
+            content: '';
+            display: inline-block;
+            position: relative;
+            width: 10vw;
+            height: 18vh;
+            top: -7vh;
+            left: 0px;
+            background-image: url("../assets/dixsept_header_logo.png");
+            background-size: contain;
+        }
+
+    .header_div {
         padding-bottom: 5%;
     }
     /* sp画面のみ対応 */
     @media screen and (max-width: 480px) {
-        header{
+        header {
             width: 100vw !important;
             display: flex !important;
         }
-        .xs_header_label{
+
+        .xs_header_label {
             display: inline-block !important;
         }
-        .header_div{
+
+        .header_div {
             padding-bottom: 0px !important;
         }
-        .v-toolbar__content, .v-toolbar__extension{
+
+        .v-toolbar__content, .v-toolbar__extension {
             display: flex !important;
             width: 100%;
         }
-        .xs_header_label{
+
+        .xs_header_label {
             margin-right: 10%;
             height: 50px;
             width: 70%;
         }
-        
     }
 </style>

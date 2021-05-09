@@ -33,7 +33,7 @@
             <v-row justify="center">
                 <v-col cols="10">
                     <v-row>
-                         <v-col class="text-h5" cols="6" sm="2">3本目</v-col>
+                        <v-col class="text-h5" cols="6" sm="2">3本目</v-col>
                         <v-col class="text-h5" cols="6" sm="2">2-2</v-col>
                         <v-col class="text-h5" cols="4" sm="4">得点者</v-col>
                         <v-col class="subtitle-2" cols="8" sm="4">太郎、太郎、太郎</v-col>

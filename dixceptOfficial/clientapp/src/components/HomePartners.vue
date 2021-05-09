@@ -33,10 +33,9 @@
 </script>
 
 <style scoped>
-@media screen and (max-width: 480px){
-  .partner_img{
-      height: 100px !important;
-  }
-
-}
+    @media screen and (max-width: 480px) {
+        .partner_img {
+            height: 100px !important;
+        }
+    }
 </style>

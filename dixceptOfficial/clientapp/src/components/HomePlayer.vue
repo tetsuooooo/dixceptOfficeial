@@ -51,10 +51,10 @@
                     accessibility: false,
                     arrows: false,
                     asNavFor: '.player_nav_area',
-                    responsive:[
+                    responsive: [
                         {
                             breakpoint: 480,
-                            settings:{
+                            settings: {
                                 slidesToShow: 1,
                                 centerMode: true,
                                 centerPadding: '0%',
@@ -89,6 +89,5 @@
 </script>
 
 <style scoped>
-
 </style>
 

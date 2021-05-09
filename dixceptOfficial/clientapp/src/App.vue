@@ -16,7 +16,7 @@
     import Vue from 'vue';
     import Header from './components/Header.vue'
     import Footer from './components/Footer.vue'
-    
+
     export default Vue.extend({
         name: 'App',
         components: {
@@ -35,6 +35,7 @@
         max-width: 100vw;
         padding: 0px;
     }
+
     .bg_color_black {
         background-color: black !important;
     }
@@ -102,28 +103,32 @@
         transition: opacity 0,7;
     }
 
-     @media screen and (max-width:480px){
-        .sp_padding_none{
+    @media screen and (max-width:480px) {
+        .sp_padding_none {
             padding: 0px !important;
         }
+
         .player_bg {
-        height: 300px;
+            height: 300px;
         }
-        .sp_player_div{
-        width: 100%;
-        height: 300px;
-        margin: auto;
+
+        .sp_player_div {
+            width: 100%;
+            height: 300px;
+            margin: auto;
         }
-        .sp_player_img{
+
+        .sp_player_img {
             width: 60% !important;
             margin: auto;
         }
-        .sp_player_font_sm{
+
+        .sp_player_font_sm {
             font-size: 25px !important;
         }
-        .row_margin{
+
+        .row_margin {
             margin: 0px !important;
         }
     }
-  
 </style>

@@ -131,9 +131,9 @@
 </script>
 
 <style scoped>
-@media screen and (max-width: 480px){
-    .uniform_img{
-        margin: auto;
+    @media screen and (max-width: 480px) {
+        .uniform_img {
+            margin: auto;
+        }
     }
-}
 </style>

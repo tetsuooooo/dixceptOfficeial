@@ -37,27 +37,27 @@
         },
     })
     export default class Shedule extends Vue {
-        data(){
+        data() {
             return {
                 year: 2021,
-                headers:[
-                    {text: "節", value: "section", align: "center"},
-                    {text: "日付", value: "date", align: "center"},
-                    {text: "時間", value: "time", align: "center"},
-                    {text: "対戦相手", value: "opponent", align: "center"},
-                    {text: "会場", value: "place", align: "center"},
-                    {text: "結果", value: "result", align: "center"},
+                headers: [
+                    { text: "節", value: "section", align: "center" },
+                    { text: "日付", value: "date", align: "center" },
+                    { text: "時間", value: "time", align: "center" },
+                    { text: "対戦相手", value: "opponent", align: "center" },
+                    { text: "会場", value: "place", align: "center" },
+                    { text: "結果", value: "result", align: "center" },
                 ],
-                items:[
-                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
-                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
-                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
-                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
-                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
-                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
-                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
-                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
-                    {section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7'},
+                items: [
+                    { section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7' },
+                    { section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7' },
+                    { section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7' },
+                    { section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7' },
+                    { section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7' },
+                    { section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7' },
+                    { section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7' },
+                    { section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7' },
+                    { section: '第1節', date: '2021/04/01', time: '10:00', opponent: '九龍FC', place: '宮代体育館', result: '5-7' },
                 ],
             }
         }
@@ -65,7 +65,7 @@
 </script>
 
 <style scoped>
-.border_left{
+    .border_left {
         border-left: solid 5px green;
     }
 </style>

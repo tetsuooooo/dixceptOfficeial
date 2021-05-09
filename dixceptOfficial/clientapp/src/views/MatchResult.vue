@@ -20,9 +20,9 @@
                             <v-col cols="3" class="text-sm-h1 text-h4 text-center ma-auto">0</v-col>
                             <v-col cols="6">
                                 <v-row justify="center">
-                                <v-col cols="12" class="text-h5 text-sm-h4 text-center">0-0</v-col>
-                                <v-col cols="12" class="text-h5 text-sm-h4 text-center">0-0</v-col>
-                            </v-row>
+                                    <v-col cols="12" class="text-h5 text-sm-h4 text-center">0-0</v-col>
+                                    <v-col cols="12" class="text-h5 text-sm-h4 text-center">0-0</v-col>
+                                </v-row>
                             </v-col>
                             <v-col cols="3" class="text-sm-h1 text-h4 text-center ma-auto">0</v-col>
                         </v-row>
@@ -67,13 +67,13 @@
                 </v-row>
             </v-col>
             <v-row justify="center" class="mt-5">
-            <v-col class="text-center" cols=10>コメント</v-col>
-            <v-col cols="10" class="mt-1">
-                sample文字列sample文字列sample文字列sample文字列sample文字列sample文字列
-                sample文字列sample文字列sample文字列sample文字列sample文字列sample文字列
-                sample文字列sample文字列sample文字列sample文字列sample文字列sample文字列
-            </v-col>
-        </v-row>
+                <v-col class="text-center" cols=10>コメント</v-col>
+                <v-col cols="10" class="mt-1">
+                    sample文字列sample文字列sample文字列sample文字列sample文字列sample文字列
+                    sample文字列sample文字列sample文字列sample文字列sample文字列sample文字列
+                    sample文字列sample文字列sample文字列sample文字列sample文字列sample文字列
+                </v-col>
+            </v-row>
         </v-row>
     </v-card>
 </template>
@@ -96,18 +96,22 @@
     .boder_left {
         border-left: solid 5px green;
     }
+
     .boder_left_black {
         border-left: solid 1px black;
     }
-    .goal_outline{
+
+    .goal_outline {
         border-top: solid 1px black;
         border-bottom: solid 1px black;
     }
+
     @media screen and (max-width: 480px) {
-        .team_img{
+        .team_img {
             width: 100% !important;
         }
-        .no_margin{
+
+        .no_margin {
             margin: 0px !important;
         }
     }
