@@ -153,3 +153,6 @@ node_modules/
 
 dixceptOfficial/clientapp/src/**/*.js
 dixceptOfficial/clientapp/src/**/*.js.map
+
+dixceptManagement/clientapp/src/**/*.js
+dixceptManagement/clientapp/src/**/*.js.map

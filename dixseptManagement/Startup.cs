@@ -1,10 +1,17 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace dixceptOfficial
+namespace dixseptManagement
 {
     public class Startup
     {
@@ -19,6 +26,7 @@ namespace dixceptOfficial
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
             services.AddSpaStaticFiles(options => options.RootPath = "clientapp/dist");
         }
 
@@ -42,14 +50,12 @@ namespace dixceptOfficial
             });
 
             app.UseSpaStaticFiles();
-
-            app.UseSpa(spa =>
+            app.UseSpa(spa => 
             {
-                spa.Options.SourcePath = "clientapp"; // SPA のプロジェクト名
-                if (env.IsDevelopment())
+                spa.Options.SourcePath = "clientapp";
+                if (env.IsDevelopment()) 
                 {
-                    // npm run serve で走らせる開発サーバーの URL
-                    spa.UseProxyToSpaDevelopmentServer("http://localhost:8083");
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:8082");
                 }
             });
         }
