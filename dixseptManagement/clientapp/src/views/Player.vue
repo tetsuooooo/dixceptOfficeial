@@ -44,7 +44,7 @@
                             </v-row>
                             <v-row justify="center">
                                 <ValidationProvider #default="{errors, valid}" name="背番号" rules="required|numeric|max:2">
-                                    <v-text-field v-model="uniformNumber.number" :error-messages="errors" label="背番号" required :success="valid" clearable counter="2" prepend-icon="fas fa-sort-numeric-up"></v-text-field>
+                                    <v-text-field v-model.number="uniformNumber" :error-messages="errors" label="背番号" required :success="valid" clearable counter="2" prepend-icon="fas fa-sort-numeric-up"></v-text-field>
                                 </ValidationProvider>
                             </v-row>
                             <v-row justify="center">
@@ -73,7 +73,6 @@
                                 </ValidationProvider>
                             </v-row>
                             <v-row justify="center">
-
                                 <v-menu ref="menu" v-model="menu" :close-on-content-click="false" :return-value.sync="birthDay" transition="scale-transition" offset-y min-width="auto">
                                     <template v-slot:activator="{ on, attrs }">
                                         <ValidationProvider #default="{errors, valid}" name="生年月日" rules="required">
@@ -123,10 +122,11 @@
 </template>
 
 <script lang="ts">
-    import { Component, Vue } from 'vue-property-decorator';
-    // カスタムバリデーション読み込み(画面単位で読み込バリデーションがある場合)
+    import { Component, Vue} from 'vue-property-decorator';
+    import {methods} from '@/common/commonMethod'
 
     @Component({
+      mixins:[methods]
     })
     export default class Player extends Vue {
         deleteItem(id: number) {
@@ -227,28 +227,6 @@
                 ]
             }
         }
-        // 画像プレビュー処理
-        imagePiked(file) {
-            // バリデーションエラー
-            if (!this.$refs.imageValidate.validate(file)) {
-                return;
-            }
-            if (file !== undefined && file !== null) {
-                // 拡張子がない場合はrerurn
-                if (file.name.lastIndexOf('.') <= 0) {
-                    return
-                }
-
-                const fr = new FileReader()
-                fr.readAsDataURL(file)
-                fr.addEventListener('load', () => {
-                    this.$data.uploadImageUrl = fr.result
-                })
-            } else {
-                this.$data.uploadImageUrl = ''
-            }
-        }
-
     }
 </script>
 
