@@ -55,7 +55,7 @@ namespace dixseptManagement
                 spa.Options.SourcePath = "clientapp";
                 if (env.IsDevelopment()) 
                 {
-                    spa.UseProxyToSpaDevelopmentServer("http://localhost:8082");
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:8081");
                 }
             });
         }

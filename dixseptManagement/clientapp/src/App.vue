@@ -51,9 +51,9 @@ export default Vue.extend({
         drawer: true,
         menus: [
           { title: 'Player', icon: 'fas fa-user', url: '/player' },
-          { title: 'Schedule', icon: 'fas fa-calendar-week', url: '/home' },
-          { title: 'Emblem', icon: 'far fa-image', url: '/favorites' },
-          { title: 'Result', icon: 'far fa-futbol', url: '/about' }
+          { title: 'Schedule', icon: 'fas fa-calendar-week', url: '/schedule' },
+          { title: 'Emblem', icon: 'far fa-image', url: '/team' },
+          { title: 'Result', icon: 'far fa-futbol', url: '/result' }
         ]
     }
   }

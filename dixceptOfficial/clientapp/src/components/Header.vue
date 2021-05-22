@@ -17,9 +17,9 @@
                         <v-row justify="center" align-content="center" class="bg_color_black">
                             <v-col cols="5" class="padding_none text-right">
                                 <v-tabs class="sample">
-                                    <v-tab to="/">Home</v-tab>
-                                    <v-tab to="/Team">Team</v-tab>
-                                    <v-tab to="/Player">Player</v-tab>
+                                    <v-tab to="/" active-class="v-tab--active" exact>Home</v-tab>
+                                    <v-tab to="/Team" active-class="v-tab--active" exact>Team</v-tab>
+                                    <v-tab to="/Player" active-class="v-tab--active" exact>Player</v-tab>
                                 </v-tabs>
                             </v-col>
                             <v-col cols="1" class="padding_none bg_color_black">
@@ -27,9 +27,9 @@
                             </v-col>
                             <v-col cols="5" class="padding_none">
                                 <v-tabs>
-                                    <v-tab to="/News">News</v-tab>
-                                    <v-tab to="/Schedule">Schedule</v-tab>
-                                    <v-tab to="/Contact">Contact</v-tab>
+                                    <v-tab to="/News" active-class="v-tab--active" exact>News</v-tab>
+                                    <v-tab to="/Schedule" active-class="v-tab--active" exact>Schedule</v-tab>
+                                    <v-tab to="/Contact" active-class="v-tab--active" exact>Contact</v-tab>
                                     <v-spacer></v-spacer>
                                 </v-tabs>
                             </v-col>

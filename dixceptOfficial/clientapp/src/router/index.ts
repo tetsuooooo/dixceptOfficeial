@@ -65,7 +65,19 @@ const routes: Array<RouteConfig> = [
 const router = new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
-    routes
+    routes,
+    scrollBehavior(to, from, savedPosition){
+        return new Promise(resolve=>{
+            this.app.$root.$on('scroll', () => {
+                let position = {x:0, y:0}
+                 // 遷移前のページのスクロールの情報があった場合には遷移前のスクロールポジションに戻る
+                if(savedPosition){
+                    position = savedPosition;
+                }
+                return resolve(position)
+            })
+        })
+    }
 })
 
 export default router

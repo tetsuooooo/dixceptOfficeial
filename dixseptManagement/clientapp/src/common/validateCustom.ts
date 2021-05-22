@@ -48,8 +48,25 @@ const nameEn = {
   },
 }
 
+const time = {
+  // ルールを書くときに使う引数。
+  params: [],
+
+  // バリデーションロジック
+  validate(value) {
+    var re = /^\d{2}:\d{2}$/
+    return re.test(String(value)) // true: バリデーションエラーなし, false: バリデーションエラーあり
+  },
+
+  // バリデーションエラーメッセージ
+  message(){
+    return `時間はhh:mmの形式で入力してください。`
+  },
+}
+
 // 定義
 export {
   nameEn,
-  password
+  password,
+  time
 }

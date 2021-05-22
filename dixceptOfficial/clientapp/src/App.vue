@@ -3,7 +3,7 @@
         <v-main>
             <v-container fluid>
                 <Header></Header>
-                <transition name="fade" mode="out-in">
+                <transition name="fade" mode="out-in" @before-enter="beforEnter">
                     <router-view></router-view>
                 </transition>
                 <Footer></Footer>
@@ -13,6 +13,7 @@
 </template>
 
 <script lang="ts">
+    // TODO: デコレータ対応行うこと
     import Vue from 'vue';
     import Header from './components/Header.vue'
     import Footer from './components/Footer.vue'
@@ -26,6 +27,12 @@
         data: () => ({
 
         }),
+        methods: {
+            // scrollBehaviorを実行する
+            beforeEnter(){
+                this.$root.$emit('scroll')
+            }
+        },
     });
 </script>
 
