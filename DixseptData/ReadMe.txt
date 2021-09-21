@@ -1,0 +1,26 @@
+﻿初回DB作成
+パッケージマネージャコンソールでDixseptDataを既定のプロジェクトに指定
+以下コマンド実行する
+update-database -context DixseptContext
+
+テーブル定義変更時
+add-migration ファイル名 -context DixseptContext
+update-database -context DixseptContext
+
+SQLスクリプトの出力
+Script-Migration -From マイグレーションファイル名From -Toマイグレーションファイル名To -context DixseptContext
+
+マイグレーションファイル作り直し
+update実施後に間違いに気づきマイグレーションファイルを1つ前の状態に戻す
+update-database ひとつ前のマイグレーションファイル名 -context DixseptContext
+マイグレーションファイル内のDown処理が走りupdate実施前の状態に戻る
+
+作り直しを行いたい末尾のマイグレーションを削除
+remove-migration -context DixseptContext
+
+初回作成用のマイグレーションファイル作成
+add-migration InitialCreate -context DixseptContext
+
+初期データ投入
+seedデータをコメントアウトしてDDLのマイグレーションファイルを別に分ける場合
+add-migration Seeds -context DixseptContext

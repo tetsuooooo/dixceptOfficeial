@@ -1,15 +1,11 @@
+using DixseptData;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using dixseptManagement.Service;
 
 namespace dixseptManagement
 {
@@ -27,7 +23,45 @@ namespace dixseptManagement
         {
             services.AddControllers();
 
-            services.AddSpaStaticFiles(options => options.RootPath = "clientapp/dist");
+            //services.AddSpaStaticFiles(options => options.RootPath = "clientapp/dist");
+
+            // DB接続
+            services.AddDbContext<DixseptContext>(options => options.
+            UseSqlServer(Configuration.GetConnectionString("develop")));
+
+            services.AddTransient<IUnitOfWork>(provider =>
+            {
+                return new UnitOfWork<DixseptContext>(provider.GetService<DixseptContext>());
+            });
+
+            // DIサービスコンテナに登録
+            services.AddScoped<IPlayerService, PlayerService>();
+            services.AddScoped<IAwsService, AwsService>();
+
+            // cors設定
+            services.AddCors(options => {
+                options.AddDefaultPolicy(
+                    builder => builder.WithOrigins("http://localhost:8080").AllowAnyMethod().AllowAnyHeader());
+
+                // contorollerごとに個別に設定も可能
+                //options.AddPolicy("CorsPolicyName",
+                //    builder => builder
+                //       .AllowAnyMethod()
+                //       .AllowAnyHeader()
+                //       .WithOrigins(new string[] { "http://localhost:8080" })
+                //   );
+            });
+
+            // 検証設定
+            // エラーメッセージ日本語化
+            //services.AddMvc(o =>
+            //{
+            //    o.ModelMetadataDetailsProviders.Add(new CustomValidationMetadataProvider(typeof(Resources)));
+            //});
+            //// カスタム検証属性のクライアント側検証
+            //services.AddSingleton<IValidationAttributeAdapterProvider, CustomValidationAttributeAdapterProvider>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,19 +78,12 @@ namespace dixseptManagement
 
             app.UseAuthorization();
 
+            // CORS設定
+            app.UseCors();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-            });
-
-            app.UseSpaStaticFiles();
-            app.UseSpa(spa => 
-            {
-                spa.Options.SourcePath = "clientapp";
-                if (env.IsDevelopment()) 
-                {
-                    spa.UseProxyToSpaDevelopmentServer("http://localhost:8081");
-                }
             });
         }
     }
